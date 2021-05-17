@@ -1,0 +1,102 @@
+:root{
+  --mybackground:orange;
+  --textcolor:brown;
+}
+body{
+  background:var(--mybackground);
+}
+
+#main{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-gap: 10px;
+  grid-auto-rows:50px;
+  background:black;
+  height:100%;
+  min-height:600px;
+  
+}
+#name_view{
+  background:lightgray;
+  display: grid;
+  grid-template-columns:1fr 4fr;
+  justify-content:center;
+  align-items:center;
+  padding:2px;
+  border-radius:5px;
+  color:var(--textcolor);
+  
+ animation-name: hide;
+ animation-duration:2s;
+ animation-fill-mode:forwards;
+ animation-play-state:paused; 
+}
+.header{
+  position:sticky;
+  top: 0px;
+  background:black;
+  z-index: 20 ;
+}
+
+.header h1{
+  position:sticky;
+  text-align: center;
+  color: gold;
+  animation-name: animate;
+  animation-fill-mode:forward;
+  animation-duration:5s;
+  font-weight: bold;
+  font-family: Courier New;
+  
+  
+}
+@keyframes animate{
+  0%{
+    color: black;
+  }
+  100%{
+    color: gold;
+  }
+}
+@keyframes hide{
+  0%{
+    opacity: 1;
+    height: 100%;
+  }
+  75%{
+    opacity: 0;
+    padding: 0px;
+    margin:0 ;
+   height:50%;
+    
+  }
+  100%{
+    opacity: 0;
+  }
+}
+#paginator{
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  display:none;
+}
+#paginator input{
+  margin-left: 10px;
+}
+.sn{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  color: white;
+  background:black;
+  display:flex;
+  align-content:center;
+  justify-content: center;
+  padding:5px;
+}
+@media screen and (min-width:600px){
+  #name_view{
+    width:min(60%,400px);
+    margin:auto;
+  }
+}

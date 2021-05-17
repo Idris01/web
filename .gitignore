@@ -1,0 +1,5 @@
+db.sqlite3
+payment/
+templates/
+__pycache__/
+migrations/
